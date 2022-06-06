@@ -1,0 +1,20 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "shortMessage": "Command failed with exit code 1: /private/var/folders/6g/pgwnwlsj51j2lycnm8twqzpc0000gp/T/dlx-38496/bin/create-next-app --ts",
+    "command": "/private/var/folders/6g/pgwnwlsj51j2lycnm8twqzpc0000gp/T/dlx-38496/bin/create-next-app --ts",
+    "escapedCommand": "\"/private/var/folders/6g/pgwnwlsj51j2lycnm8twqzpc0000gp/T/dlx-38496/bin/create-next-app\" --ts",
+    "exitCode": 1,
+    "failed": true,
+    "timedOut": false,
+    "isCanceled": false,
+    "killed": false,
+    "err": {
+      "name": "pnpm",
+      "message": "Command failed with exit code 1: /private/var/folders/6g/pgwnwlsj51j2lycnm8twqzpc0000gp/T/dlx-38496/bin/create-next-app --ts",
+      "stack": "pnpm: Command failed with exit code 1: /private/var/folders/6g/pgwnwlsj51j2lycnm8twqzpc0000gp/T/dlx-38496/bin/create-next-app --ts\n    at makeError (/Users/growingio/pnpm-global/5/node_modules/.pnpm/pnpm@6.28.0/node_modules/pnpm/dist/pnpm.cjs:42412:17)\n    at handlePromise (/Users/growingio/pnpm-global/5/node_modules/.pnpm/pnpm@6.28.0/node_modules/pnpm/dist/pnpm.cjs:42983:33)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async Object.handler (/Users/growingio/pnpm-global/5/node_modules/.pnpm/pnpm@6.28.0/node_modules/pnpm/dist/pnpm.cjs:176970:7)\n    at async /Users/growingio/pnpm-global/5/node_modules/.pnpm/pnpm@6.28.0/node_modules/pnpm/dist/pnpm.cjs:181595:21\n    at async run (/Users/growingio/pnpm-global/5/node_modules/.pnpm/pnpm@6.28.0/node_modules/pnpm/dist/pnpm.cjs:181569:34)\n    at async runPnpm (/Users/growingio/pnpm-global/5/node_modules/.pnpm/pnpm@6.28.0/node_modules/pnpm/dist/pnpm.cjs:181780:5)\n    at async /Users/growingio/pnpm-global/5/node_modules/.pnpm/pnpm@6.28.0/node_modules/pnpm/dist/pnpm.cjs:181772:7"
+    }
+  }
+}

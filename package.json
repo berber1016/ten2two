@@ -1,0 +1,70 @@
+{
+    "name": "ten2two",
+    "version": "0.1.0",
+    "description": "ten 2 two",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack serve",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/berber1016/ten2two.git"
+    },
+    "keywords": [
+        "visual",
+        "binary"
+    ],
+    "author": "berber1016",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/berber1016/ten2two/issues"
+    },
+    "homepage": "https://github.com/berber1016/ten2two#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.18.2",
+        "@babel/eslint-parser": "^7.18.2",
+        "@babel/plugin-proposal-class-properties": "^7.17.12",
+        "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+        "@babel/plugin-transform-runtime": "^7.18.2",
+        "@babel/preset-env": "^7.18.2",
+        "@babel/preset-react": "^7.17.12",
+        "@babel/preset-typescript": "^7.17.12",
+        "@babel/runtime": "^7.18.3",
+        "@types/node": "^17.0.40",
+        "@types/react": "^18.0.12",
+        "@types/react-dom": "^18.0.5",
+        "@types/webpack": "^5.28.0",
+        "@types/webpack-dev-server": "^4.7.2",
+        "@typescript-eslint/eslint-plugin": "^5.27.0",
+        "@typescript-eslint/parser": "^5.27.0",
+        "awesome-typescript-loader": "^5.2.1",
+        "babel-loader": "^8.2.5",
+        "babel-plugin-formatjs": "^10.3.24",
+        "bable-loader": "^0.0.1-security",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-react": "^7.30.0",
+        "html-webpack-plugin": "^5.5.0",
+        "postcss-less": "^6.0.0",
+        "prettier": "^2.6.2",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "source-map-loader": "^3.0.1",
+        "stylelint": "^14.8.5",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-recommended-less": "^1.0.4",
+        "stylelint-config-standard": "^25.0.0",
+        "stylelint-less": "^1.0.5",
+        "stylelint-prettier": "^2.0.0",
+        "terser-webpack-plugin": "^5.3.3",
+        "ts-node": "^10.8.1",
+        "typescript": "^3.7.4",
+        "webpack": "^5.73.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.9.1"
+    }
+}
