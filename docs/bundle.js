@@ -35,11 +35,143 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.1.0/node_modules/react/index.js"));
 
+var _index = __webpack_require__(/*! ./core/index */ "./src/core/index.ts");
+
 var App = function App(props) {
-  return /*#__PURE__*/_react["default"].createElement("div", null, "Webpack is cool!");
+  return /*#__PURE__*/_react["default"].createElement("div", null, "ten 2 two", /*#__PURE__*/_react["default"].createElement("div", null, (0, _index.conversionOfNumbers)('Decimal', 'Binary', 5.75), /*#__PURE__*/_react["default"].createElement("span", null, "\u95F4\u9694"), (0, _index.conversionOfNumbers)('Binary', 'Decimal', 101.11)));
 };
 
 var _default = App;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./src/core/index.ts":
+/*!***************************!*\
+  !*** ./src/core/index.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.conversionOfNumbers = conversionOfNumbers;
+exports["default"] = void 0;
+var NumberSystems;
+
+(function (NumberSystems) {
+  NumberSystems["Decimal"] = "Decimal";
+  NumberSystems["Binary"] = "Binary";
+  NumberSystems["Octal"] = "Octal";
+  NumberSystems["Hexadecimal"] = "Hexadecimal";
+})(NumberSystems || (NumberSystems = {}));
+
+var NumberSystemsBase;
+
+(function (NumberSystemsBase) {
+  NumberSystemsBase[NumberSystemsBase["Decimal"] = 10] = "Decimal";
+  NumberSystemsBase[NumberSystemsBase["Binary"] = 2] = "Binary";
+  NumberSystemsBase[NumberSystemsBase["Octal"] = 8] = "Octal";
+  NumberSystemsBase[NumberSystemsBase["Hexadecimal"] = 16] = "Hexadecimal";
+})(NumberSystemsBase || (NumberSystemsBase = {}));
+
+function conversionOfNumbers(from, to, num) {
+  if (from === to) {
+    return num;
+  }
+
+  var base = from === NumberSystems.Decimal ? num : conversionDecimal(from, num);
+
+  if (to === NumberSystems.Decimal) {
+    return base;
+  }
+
+  return decimalConversion(to, base);
+}
+/**
+ * 任何进制转为10进制
+ * @param from 
+ * @param num 
+ */
+
+
+function conversionDecimal(from, num) {
+  var nums = num.toString().split('.');
+  var n = nums[0].length;
+  var b = NumberSystemsBase[from];
+  var s = 0;
+  var p = 0;
+
+  while (p < n) {
+    s = s + Number(nums[0][p]) * Math.pow(b, n - p);
+    p++;
+  } // point 
+
+
+  if (nums.length > 1) {
+    n = nums[1].length;
+    p = 0;
+    var i = -1;
+
+    while (p < n) {
+      s = s + Number(nums[1][p]) * Math.pow(b, i);
+      p++;
+      i--;
+    }
+  }
+
+  return s;
+}
+/**
+ * 10进制转为任何进制
+ * @param to 
+ * @param num 
+ */
+
+
+function decimalConversion(to, num) {
+  var b = NumberSystemsBase[to];
+  var nums = num.toString().split('.');
+  var s = '';
+  var n = 0; // 余数
+
+  var d = Number(nums[0]);
+  var i = 0;
+
+  do {
+    i++;
+    n = d % b;
+    d = Math.floor(d / b);
+    s = n.toString() + s;
+  } while (d !== 0 && i < 32);
+
+  if (nums.length > 1) {
+    d = Number("0.".concat(nums[1]));
+    s += '.';
+    i = 0;
+
+    while (d !== 0 && i <= 32) {
+      d = d * b;
+      var v = d.toString().split('.');
+      s += v[0];
+
+      if (v[1]) {
+        d = Number("0.".concat(v[1]));
+      } else {
+        d = 0;
+      }
+
+      i++;
+    }
+  }
+
+  return Number(s);
+}
+
+var _default = conversionOfNumbers;
 exports["default"] = _default;
 
 /***/ }),
