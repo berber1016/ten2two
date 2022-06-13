@@ -1,6 +1,40 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
+  \**********************************************************************************************************/
+/***/ ((module) => {
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/arrayWithHoles.js":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
+  \********************************************************************************************************/
+/***/ ((module) => {
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
 /***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!***************************************************************************************************************!*\
   !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
@@ -17,6 +51,123 @@ module.exports = _interopRequireDefault, module.exports.__esModule = true, modul
 
 /***/ }),
 
+/***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
+  \**************************************************************************************************************/
+/***/ ((module) => {
+
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/nonIterableRest.js":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
+  \*********************************************************************************************************/
+/***/ ((module) => {
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+module.exports = _nonIterableRest, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/slicedToArray.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/slicedToArray.js ***!
+  \*******************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/arrayWithHoles.js");
+
+var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
+
+var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
+
+var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/nonIterableRest.js");
+
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+}
+
+module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/typeof.js":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/typeof.js ***!
+  \************************************************************************************************/
+/***/ ((module) => {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
+}
+
+module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js":
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js ***!
+  \********************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
+}
+
+module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
 /***/ "./src/App.tsx":
 /*!*********************!*\
   !*** ./src/App.tsx ***!
@@ -28,17 +179,49 @@ module.exports = _interopRequireDefault, module.exports.__esModule = true, modul
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/typeof.js");
+
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = void 0;
 
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.1.0/node_modules/react/index.js"));
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/.pnpm/@babel+runtime@7.18.3/node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.1.0/node_modules/react/index.js"));
 
 var _index = __webpack_require__(/*! ./core/index */ "./src/core/index.ts");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var App = function App(props) {
-  return /*#__PURE__*/_react["default"].createElement("div", null, "ten 2 two", /*#__PURE__*/_react["default"].createElement("div", null, (0, _index.conversionOfNumbers)('Decimal', 'Binary', 5.75), /*#__PURE__*/_react["default"].createElement("span", null, "\u95F4\u9694"), (0, _index.conversionOfNumbers)('Binary', 'Decimal', 101.11)));
+  var _useState = (0, _react.useState)(5.75),
+      _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
+      input1 = _useState2[0],
+      setInput1 = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(101.11),
+      _useState4 = (0, _slicedToArray2["default"])(_useState3, 2),
+      input2 = _useState4[0],
+      setInput2 = _useState4[1];
+
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("span", null, "10 to 2 ", /*#__PURE__*/_react["default"].createElement("input", {
+    type: "text",
+    onChange: function onChange(e) {
+      var _e$target;
+
+      return setInput1(Number(e === null || e === void 0 ? void 0 : (_e$target = e.target) === null || _e$target === void 0 ? void 0 : _e$target.value));
+    }
+  }), " "), (0, _index.conversionOfNumbers)('Decimal', 'Binary', input1)), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("span", null, "2 to 10 ", /*#__PURE__*/_react["default"].createElement("input", {
+    type: "text",
+    onChange: function onChange(e) {
+      var _e$target2;
+
+      return setInput2(Number(e === null || e === void 0 ? void 0 : (_e$target2 = e.target) === null || _e$target2 === void 0 ? void 0 : _e$target2.value));
+    }
+  })), (0, _index.conversionOfNumbers)('Binary', 'Decimal', input2)));
 };
 
 var _default = App;
